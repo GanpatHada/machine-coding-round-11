@@ -16,6 +16,7 @@ export function MoviesProvider({ children }) {
   const [ratingFilter, setRatingFilter] = useState("Rating");
   const [yearFilter, setYearFilter] = useState("Release Year");
   const [genreFilter, setGenreFilter] = useState("All Genres");
+  const [addMovieModal,setAddMovieModal]=useState(false)
 
   const addToWatchList = (movieId) => {
     let tempMovies = moviesList;
@@ -74,6 +75,7 @@ export function MoviesProvider({ children }) {
         removeFromWatchList,
         removeFromStarred,
         addToStarred,
+        addMovieModal,setAddMovieModal
       }}
     >
       {children}

@@ -3,7 +3,7 @@ import { MoviesContext } from "../../contexts/MoviesContext";
 import './Movies.css'
 import MoviesCard from "../../components/movies-card/MoviesCard";
 const Movies = () => {
-  const { moviesList,searchFilter,ratingFilter,setRatingFilter,yearFilter,setYearFilter,genreFilter,setGenreFilter} = useContext(MoviesContext);
+  const { moviesList,searchFilter,ratingFilter,setRatingFilter,yearFilter,setYearFilter,genreFilter,setGenreFilter,addMovieModal,setAddMovieModal} = useContext(MoviesContext);
 
 
   const getMovies=()=>{
@@ -65,7 +65,7 @@ const Movies = () => {
           return <option key={index}>{rating}</option>;
         })}
       </select>
-      <button className="primary-btn">Add a Movie</button>
+      <button className="primary-btn" onClick={()=>setAddMovieModal(true)}>Add a Movie</button>
       </header>
       <main>
         {getMovies().map(movie=>{

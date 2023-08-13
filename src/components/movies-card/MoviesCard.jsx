@@ -1,24 +1,31 @@
 import React, { useContext } from 'react'
 import './MoviesCard.css'
 import { MoviesContext } from '../../contexts/MoviesContext'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 const MoviesCard = ({movie:{imageURL,summary,title,id,watchList,starred}}) => {
-  const location=useLocation()  
+  const location=useLocation() ;
+  const navigate=useNavigate() 
   const{addToWatchList,removeFromWatchList,removeFromStarred,addToStarred}=useContext(MoviesContext)
-  const handleWatchList=()=>{
+  const handleWatchList=(e)=>{
+    e.stopPropagation()
     if(watchList)
        return removeFromWatchList(id)
     return addToWatchList(id)   
   }
 
-  const handleStarred=()=>{
+  const handleStarred=(e)=>{
+    e.stopPropagation()
     if(starred)
        return removeFromStarred(id)
     return addToStarred(id)   
   }
 
+  const handleCardClick=()=>{
+      navigate(`/movies/${id}`)
+  }
+
   return (
-    <div className='card'>
+        <div className='card' onClick={handleCardClick}>
         <section className="image-section">
             <img src={imageURL} alt="..." />
         </section>

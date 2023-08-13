@@ -1,0 +1,40 @@
+#movie-details{
+    background-color: rgb(233, 233, 233);
+    height: calc(100vh - 60px);
+    width: 100vw;
+}
+#movie-details-content{
+    height: 500px;
+    display: flex;
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+#movie-details-content #image-section{
+    overflow: hidden;
+    flex: 1;
+}
+#movie-details-content #info-section{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: center;
+    
+    margin-left: 20px;
+    
+}
+#movie-details-content #info-section div{
+    margin: 20px 0px;
+}
+#movie-details-content #info-section .button-section{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#movie-details-content #info-section button{
+    padding: 0px 10px ;
+    min-width: 80px;
+    height: 40px;
+}
