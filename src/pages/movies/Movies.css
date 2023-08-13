@@ -1,0 +1,31 @@
+#movies header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 30px;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    right: 0px;
+}
+#movies header button{
+    height: 40px;
+    width: 100px;
+    
+}
+#movies select{
+    height: 40px;
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 5px ;
+    border: 1px solid lightgray;
+}
+#movies main{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 120px;
+    max-height: calc(100vh - 120px);
+   
+}

@@ -1,0 +1,31 @@
+.card{
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card section{
+    width: 100%;
+}
+.card .image-section{
+    height: 200px;
+    overflow: hidden;
+   
+}
+.card .info{
+    padding: 10px;
+}
+.card .button-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.card .button-section button{
+    height: 40px;
+    padding: 0px 20px ;
+}
